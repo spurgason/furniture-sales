@@ -32,7 +32,7 @@ type Auth {
 
   type Item {
     itemId: String
-    sellerss: [String]
+    sellers: [String]
     # sellers: String
     description: String
     title: String
