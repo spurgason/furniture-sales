@@ -31,7 +31,7 @@ type Auth {
 }
 
   type Item {
-    itemId: String
+    itemId: ID!
     sellers: [String]
     # sellers: String
     description: String
