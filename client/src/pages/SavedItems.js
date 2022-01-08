@@ -1,7 +1,7 @@
 import React from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 import Auth from '../utils/auth';
-import { removeItemId } from '../utils/localStorage';
+import { removeItemId, saveItemIds } from '../utils/localStorage';
 import { useQuery, useMutation } from '@apollo/client';
 import { GET_ME } from '../utils/queries';
 import { REMOVE_ITEM } from '../utils/mutations';
@@ -50,7 +50,7 @@ const SavedItems = () => {
           {userData.savedItems.map((item) => {
             return (
               <Card key={item.itemId} border='dark'>
-                {book.image ? <Card.Img src={item.image} alt={`The picture for ${item.title}`} variant='top' /> : null}
+                {item.image ? <Card.Img src={item.image} alt={`The picture for ${item.title}`} variant='top' /> : null}
                 <Card.Body>
                   <Card.Title>{item.title}</Card.Title>
                   <p className='small'>Authors: {item.sellers}</p>
