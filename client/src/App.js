@@ -7,9 +7,13 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import SearchItems from './pages/SearchItems';
+
+import { Provider } from 'react-redux';
+import store from './reduxStore/store';
+
 import SavedItems from './pages/SavedItems';
 import Navbar from './components/Navbar';
+import Home from './pages/Home';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -35,12 +39,14 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <>
-          <Navbar />
+        <Provider store={store}>
+        <Navbar />
             <Routes>
-              <Route exact path='/' component={SearchItems} />
-              <Route exact path='/saved' component={SavedItems} />
+              <Route path ="/" element= {<Home/>}/>
+              <Route exact path='/saved' element={<SavedItems/>} />
               <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
             </Routes>
+        </Provider>
         </>
       </Router>
     </ApolloProvider>

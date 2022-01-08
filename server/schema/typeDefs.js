@@ -40,11 +40,19 @@ type Auth {
     link: String
   }
 
+  type Category {
+    _id: ID
+    name: String
+  }
+
   type Query {
+    categories: [Category]
     me: User
     users: [User]
     user(username: String!): User
   }
+
+  
  
 
 `;
