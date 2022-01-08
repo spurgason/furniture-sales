@@ -6,7 +6,7 @@ import { useMutation } from '@apollo/client';
 import { SAVE_ITEM } from '../utils/mutations';
 
 const SearchItems = () => {
-  const [searchedItems, setSearchedItem] = useState([]);
+  const [searchedItems, setSearchedItems] = useState([]);
   const [searchInput, setSearchInput] = useState('');
   const [savedItemIds, setSavedItemIds] = useState(getSavedItemIds());
 
@@ -82,7 +82,7 @@ const SearchItems = () => {
                   onChange={(e) => setSearchInput(e.target.value)}
                   type='text'
                   size='lg'
-                  placeholder='Search for a book'
+                  placeholder='Search for a item'
                 />
               </Col>
               <Col xs={12} md={4}>
@@ -99,7 +99,7 @@ const SearchItems = () => {
         <h2>
           {searchedItems.length
             ? `Viewing ${searchedItems.length} results:`
-            : 'Search for a book to begin'}
+            : 'Search for a item to begin'}
         </h2>
         <CardColumns>
           {searchedItems.map((item) => {
