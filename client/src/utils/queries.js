@@ -10,3 +10,19 @@ export const QUERY_ITEMS = gql`
     }
   }
 `;
+
+export const GET_ME = gql`
+  query users {
+    _id
+    username
+    email
+    itemCount
+    savedItems{
+      itemId
+      sellers
+      description
+      title
+      image
+    }
+  }
+`
