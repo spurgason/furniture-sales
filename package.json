@@ -4,9 +4,11 @@
   "description": "",
   "main": "server/server.js",
   "dependencies": {
-    "concurrently": "^7.0.0"
+    "@stripe/stripe-js": "^1.22.0",
+    "apollo-server-express": "^3.6.1",
+    "concurrently": "^7.0.0",
+    "mongoose": "^6.1.5"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
