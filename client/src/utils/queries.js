@@ -28,8 +28,10 @@ export const GET_ME = gql`
 `
 
 export const QUERY_CATEGORIES = gql`
-    query categories {
+    {
+      categories {
       _id
       name
     }
+  }
 `;
