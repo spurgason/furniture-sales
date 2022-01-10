@@ -22,6 +22,9 @@ const reducers = (state = initialState, action) => {
                 ...state,
                 currentCategory: action.currentCategory
             };
+
+        default:
+            return state;
     }
 }
 

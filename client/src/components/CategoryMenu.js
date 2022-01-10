@@ -13,6 +13,7 @@ function CategoryMenu() {
     const dispatch = useDispatch();
 
     const { categories } = state;
+    console.log(categories);
     const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
    
     const handleClick = id => {
@@ -43,9 +44,10 @@ function CategoryMenu() {
 
     return (
         <div>
-            <h2>Select Category:</h2>
+            <h2 className="mt-3 d-flex justify-content-center">Select Category</h2>
             {categories.map((item) => (
                 <button
+                    className="btn btn-primary m-2"
                     key={item._id}
                     onClick={() => {
                         handleClick(item._id);
