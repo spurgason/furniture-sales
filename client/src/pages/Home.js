@@ -7,11 +7,8 @@ const Home = () => {
     return (
         <div className="container">
             <CategoryMenu />
-
-            <ItemList />
+             {/* <ItemList /> */}
             <Cart />
-            {/* <ItemList /> */}
-
         </div>
     )
 }

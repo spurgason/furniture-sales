@@ -1,16 +1,27 @@
 import React, { useEffect } from 'react';
 import {loadStripe} from '@stripe/stripe-js';
+import CartItem from './CartItem';
 import { useLazyQuery } from '@apollo/client';
 import { QUERY_CHECKOUT } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
 import Auth from '../utils/auth';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../utils/actions';
+import { useSelector, useDispatch } from 'react-redux';
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Cart = () => {
-    const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
+
+  const state = useSelector((state) => {
+    return state
+  });
+
+  const dispatch = useDispatch();
+
+  function toggleCart() {
+    dispatch({ type: TOGGLE_CART });
+  }
 
   useEffect(() => {
     if (data) {
@@ -24,20 +35,26 @@ const Cart = () => {
     async function getCart() {
       const cart = await idbPromise('cart', 'get');
       dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
-    }
+    };
 
     if (!state.cart.length) {
       getCart();
     }
   }, [state.cart.length, dispatch]);
 
-  function toggleCart() {
-    dispatch({ type: TOGGLE_CART });
+  if (!state.cartOpen) {
+    return (
+      <div className="cart-closed" onClick={toggleCart}>
+        <span
+          role="img"
+          aria-label="trash">🛒</span>
+      </div>
+    );
   }
 
   function calculateTotal() {
     let sum = 0;
-    state.cart.forEach((item) => {
+    state.cart.forEach(item => {
       sum += item.price * item.purchaseQuantity;
     });
     return sum.toFixed(2);
@@ -53,10 +70,9 @@ const Cart = () => {
     });
 
     getCheckout({
-      variables: { products: productIds },
+      variables: { products: productIds }
     });
   }
-
   if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
