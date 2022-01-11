@@ -15,7 +15,7 @@ const AppNavbar = () => {
       <Navbar bg='dark' variant='dark' expand='lg'>
         <Container fluid>
           <Navbar.Brand as={Link} to='/'>
-            Items Search
+            Furniture Sales
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar' />
           <Navbar.Collapse id='navbar'>
@@ -23,6 +23,9 @@ const AppNavbar = () => {
               <Nav.Link as={Link} to='/'>
                 Search For Items
               </Nav.Link>
+              <Nav.Link as={Link} to='/cart'>
+                  🛒
+                  </Nav.Link>
               {/* if user is logged in show saved items and logout */}
               {Auth.loggedIn() ? (
                 <>
