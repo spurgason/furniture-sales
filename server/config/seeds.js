@@ -14,7 +14,7 @@ db.once('open', async () => {
 
   console.log('categories seeded');
 
-  await Category.deleteMany();
+    await Item.deleteMany();
 
   const items = await Item.insertMany([
     {
@@ -125,30 +125,9 @@ db.once('open', async () => {
       quantity: 1
     }
   ]);
-//   await Item.deleteMany();
+
 
   console.log('items seeded');
-
-  await User.deleteMany();
-
-  await User.create({
-    username: 'Josh',
-    email: 'pamela@testmail.com',
-    password: 'password12345',
-    orders: [
-      {
-        items: [items[0]._id, items[0]._id, items[1]._id]
-      }
-    ]
-  });
-
-  await User.create({
-   username: 'eholt',
-    email: 'eholt@testmail.com',
-    password: 'password12345'
-  });
-
-  console.log('users seeded');
 
   process.exit();
 });
