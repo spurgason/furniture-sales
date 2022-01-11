@@ -65,24 +65,6 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    
-    savedItem: async (parent, { items }, context) => {
-      console.log("save an item")
-      console.log(context.user)
-            if (context.user) {
-        const savedItems = await Item.create({ ...args, username: context.user.username });
-    
-       const updatedUser =  await User.findByIdAndUpdate(
-          { _id: context.user._id },
-          { $addToSet: { savedItems: args.input } },
-          { new: true }
-        );
-    
-      return updatedUser;
-      }
-    
-      throw new AuthenticationError('You need to be logged in!');
-  },
   
   removeItem: async (parent, { itemId }, context) => {
     console.log("delete an item")
