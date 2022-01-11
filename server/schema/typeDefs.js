@@ -8,21 +8,13 @@ type Mutation {
   saveItem(input: savedItem!): User
   removeItem(itemId: ID!): User
 }
-input savedItem {
-  itemId: String
-  sellers: [String]
-  description: String
-  title: String
-  image: String
-  
-}
 
 type User {
   _id: ID!
   username: String
   email: String
   itemCount: Int
-  savedItems: [Item]
+  savedItems: [Items]
 }
 
 type Auth {
@@ -31,13 +23,13 @@ type Auth {
 }
 
   type Item {
-    itemId: ID!
-    sellers: [String]
-    # sellers: String
+    _id: ID
+    name: String
     description: String
-    title: String
     image: String
-    link: String
+    category: Category
+    price: Float
+    quantity: Int
   }
 
   type Category {
