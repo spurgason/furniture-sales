@@ -4,9 +4,14 @@ export const QUERY_ITEMS = gql`
   query items {
     items {
       _id
-      title
-      sellers
+      name
       description
+      image
+      category {
+        _id
+      }
+      price
+      quantity
     }
   }
 `;
