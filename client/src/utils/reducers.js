@@ -19,6 +19,13 @@ const initialState = {
 
 const reducers = (state = initialState, action) => {
     switch (action.type) {
+
+      case UPDATE_ITEMS:
+      return {
+        ...state,
+       items: [...action.items],
+      };
+
         // if action type value is the value of `UPDATE_CATEGORIES`, return a new state object with an updated categories array
         case UPDATE_CATEGORIES:
             return {
