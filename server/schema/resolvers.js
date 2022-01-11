@@ -1,6 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Category, Item } = require('../models'); 
+const { User, Category, Item, Cart } = require('../models'); 
 const { signToken } = require('../utils/auth');
+const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
   Query: {
@@ -65,7 +66,7 @@ const resolvers = {
       return { token, user };
     },
     
-    saveItem: async (parent, args, context) => {
+    savedItem: async (parent, { items }, context) => {
       console.log("save an item")
       console.log(context.user)
             if (context.user) {

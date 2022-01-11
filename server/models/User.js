@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
+const Item = require('./Item');
 
 // import schema from Item.js
 const itemSchema = require('./Item');
@@ -24,7 +25,7 @@ const userSchema = new Schema(
       required: true,
     },
     // set savedItems to be an array of data that adheres to the itemSchema
-    // savedItems: [itemSchema],
+    items: [Item.schema],
   },
   // set this to use virtual below
   {
@@ -50,9 +51,9 @@ userSchema.methods.isCorrectPassword = async function (password) {
 };
 
 // when we query a user, we'll also get another field called `itemCount` with the number of items we have
-// userSchema.virtual('itemCount').get(function () {
-//   return this.savedItems.length;
-// });
+userSchema.virtual('itemCount').get(function () {
+  return this.savedItems.length;
+});
 
 const User = mongoose.model('User', userSchema);
 
