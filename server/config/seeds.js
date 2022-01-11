@@ -16,7 +16,7 @@ db.once('open', async () => {
 
   await Category.deleteMany();
 
-  const items = await Items.insertMany([
+  const items = await Item.insertMany([
     {
       name: 'Couch',
       description:
@@ -125,6 +125,7 @@ db.once('open', async () => {
       quantity: 1
     }
   ]);
+//   await Item.deleteMany();
 
   console.log('items seeded');
 

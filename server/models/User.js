@@ -24,7 +24,7 @@ const userSchema = new Schema(
       required: true,
     },
     // set savedItemss to be an array of data that adheres to the itemSchema
-    savedItems: [itemSchema],
+    // savedItems: [itemSchema],
   },
   // set this to use virtual below
   {
