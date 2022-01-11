@@ -69,7 +69,7 @@ const resolvers = {
       console.log("save an item")
       console.log(context.user)
             if (context.user) {
-      //   const savedItem = await Item.create({ ...args, username: context.user.username });
+        const savedItems = await Item.create({ ...args, username: context.user.username });
     
        const updatedUser =  await User.findByIdAndUpdate(
           { _id: context.user._id },

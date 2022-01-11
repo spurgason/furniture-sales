@@ -19,7 +19,7 @@ export const GET_ME = gql`
     itemCount
     savedItems{
       itemId
-      sellers
+      name
       description
       title
       image
@@ -36,8 +36,8 @@ export const QUERY_CATEGORIES = gql`
   }
 `
 export const QUERY_CHECKOUT = gql`
-  query getCheckout($products: [ID]!) {
-    checkout(products: $products) {
+  query getCheckout($items: [ID]!) {
+    checkout(items: $items) {
       session
     }
   }

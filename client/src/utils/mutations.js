@@ -47,7 +47,7 @@ export const SAVE_ITEM = gql`
       email
       savedItems {
         itemId
-        sellers
+        name
         description
         title
         image
@@ -65,7 +65,7 @@ export const REMOVE_ITEM = gql`
       email
       savedItems {
         itemId
-        sellers
+        name
         description
         title
         image

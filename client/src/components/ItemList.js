@@ -11,7 +11,7 @@ const ItemList = ({ items }) => {
       {items &&
         items.map((item) => (
           <Card outline color='secondary' key={item._id}>
-            <CardHeader>Title: {item.title}</CardHeader>
+            <CardHeader>Name: {item.name}</CardHeader>
             <CardBody>
               <CardTitle>Sellers: {item.sellers}</CardTitle>
               <CardText>Description: {item.description}</CardText>

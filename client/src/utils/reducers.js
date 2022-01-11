@@ -1,5 +1,5 @@
 import {
-    UPDATE_PRODUCTS,
+    UPDATE_ITEMS,
     UPDATE_CATEGORIES,
     UPDATE_CURRENT_CATEGORY,
     ADD_TO_CART,
@@ -10,7 +10,7 @@ import {
 } from "./actions";
 
 const initialState = {
-    products: [],
+    items: [],
     cart: [],
     cartOpen: false,
     categories: [],
@@ -36,12 +36,12 @@ const reducers = (state = initialState, action) => {
                 return {
                   ...state,
                   cartOpen: true,
-                  cart: [...state.cart, action.product]
+                  cart: [...state.cart, action.item]
                 };
           
               case REMOVE_FROM_CART:
-                let newState = state.cart.filter(product => {
-                  return product._id !== action._id;
+                let newState = state.cart.filter(item => {
+                  return item._id !== action._id;
                 });
           
                 return {
@@ -54,11 +54,11 @@ const reducers = (state = initialState, action) => {
                 return {
                   ...state,
                   cartOpen: true,
-                  cart: state.cart.map(product => {
-                    if (action._id === product._id) {
-                      product.purchaseQuantity = action.purchaseQuantity;
+                  cart: state.cart.map(item => {
+                    if (action._id === item._id) {
+                      item.purchaseQuantity = action.purchaseQuantity;
                     }
-                    return product;
+                    return item;
                   })
                 };
           
