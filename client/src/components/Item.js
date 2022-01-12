@@ -51,10 +51,11 @@ function Item(item) {
             <div className="card-header">
                 {name}
             </div>
+            
             <Link to={`/item/${_id}`}>
                 <img
                     alt={name}
-                    src={`../images/${image}`}
+                    src={`images/${image}`}
                     
                 />
 
