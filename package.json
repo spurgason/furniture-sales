@@ -4,12 +4,21 @@
   "description": "",
   "main": "server/server.js",
   "dependencies": {
-    "concurrently": "^7.0.0"
+    "@stripe/stripe-js": "^1.22.0",
+    "apollo-server-express": "^3.6.1",
+    "concurrently": "^7.0.0",
+    "mongoose": "^6.1.5",
+    "stripe": "^8.195.0"
   },
-  "devDependencies": {},
+  "engines": {
+    "node": "16.13.1"
+  },
   "scripts": {
     "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
   },
