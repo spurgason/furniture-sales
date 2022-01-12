@@ -20,7 +20,7 @@ db.once('open', async () => {
     {
       name: 'Couch',
       description:
-        'Description of couch.',
+        'This a place holder for a description of this couch to be entered by the seller.',
       image: 'couch.jpg',
       category: categories[0]._id,
       price: 45.99,
@@ -29,7 +29,7 @@ db.once('open', async () => {
     {
       name: 'Dinning table',
       description:
-        'Description of table.',
+        'This a place holder for a description of thi dinning table to be entered by the seller.',
       image: 'dinning-table.jpg',
       category: categories[0]._id,
       price: 50.99,
@@ -39,7 +39,7 @@ db.once('open', async () => {
       name: 'Bed',
       category: categories[1]._id,
       description:
-        'Description of bed.',
+        'This a place holder for a description of this bed to be entered by the seller.',
       image: 'bed.jpg',
       price: 85.99,
       quantity: 1
@@ -48,7 +48,7 @@ db.once('open', async () => {
       name: 'Glider',
       category: categories[1]._id,
       description:
-        'Description of outdoor glider',
+        'This a place holder for a description of this outdoor glider to be entered by the seller.',
       image: 'glidder.jpg',
       price: 13.99,
       quantity: 1
@@ -57,7 +57,7 @@ db.once('open', async () => {
       name: 'Makeup desk',
       category: categories[1]._id,
       description:
-        'Description of makeup desk.',
+        'This a place holder for a description of this makeup desk to be entered by the seller.',
       image: 'makeup-desk.jpg',
       price: 14.99,
       quantity: 1
@@ -66,7 +66,7 @@ db.once('open', async () => {
       name: 'Recliner',
       category: categories[2]._id,
       description:
-        'Desription of recliner.',
+        'This a place holder for a description of this recliner to be entered by the seller.',
       image: 'recliner.jpg',
       price: 39.99,
       quantity: 1
@@ -75,7 +75,7 @@ db.once('open', async () => {
       name: 'Bar Stool',
       category: categories[2]._id,
       description:
-        'Description of bar stool.',
+        'This a place holder for a description of this bar stool to be entered by the seller.',
       image: 'bar-stool.jpg',
       price: 4.99,
       quantity: 1
@@ -84,7 +84,7 @@ db.once('open', async () => {
       name: 'Knightstand',
       category: categories[3]._id,
       description:
-        'Description of nightstand.',
+        'This a place holder for a description of this nightstand to be entered by the seller.',
       image: 'nightstand.jpg',
       price: 19.99,
       quantity: 1
@@ -92,16 +92,16 @@ db.once('open', async () => {
     {
       name: 'outdoor table',
       category: categories[4]._id,
-      description: 'Description of outdoor table',
+      description: 'This a place holder for a description of this outdoor table to be entered by the seller.',
       image: 'outdoor-table.jpg',
       price: 35.99,
       quantity: 1
     },
     {
-      name: 'Linen Shelf',
+      name: 'Linen Storage Shelf',
       category: categories[4]._id,
       description:
-        'Description of linen shelf.',
+        'This a place holder for a description of this linen storage shelf to be entered by the seller.',
       image: 'linen-shelf.jpg',
       price: 12.99,
       quantity: 1
@@ -110,7 +110,7 @@ db.once('open', async () => {
       name: 'dresser',
       category: categories[4]._id,
       description:
-        'Description of dresser.',
+        'This a place holder for a description of this dresser to be entered by the seller.',
       image: 'dresser.jpg',
       price: 27.99,
       quantity: 1
@@ -119,7 +119,7 @@ db.once('open', async () => {
       name: 'ottoman',
       category: categories[4]._id,
       description:
-        'Desription of ottoman.',
+        'This a place holder for a description of this ottoman to be entered by the seller.',
       image: 'ottoman.jpg',
       price: 29.99,
       quantity: 1
