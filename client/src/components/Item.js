@@ -55,6 +55,7 @@ function Item(item) {
                 <img
                     alt={name}
                     src={`../images/${image}`}
+                    
                 />
 
             </Link>
