@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "seed": "node config/seeds.js",
+    "start": "node server.js",
+    "watch": "nodemon"
   },
   "keywords": [],
   "author": "",
@@ -14,9 +16,12 @@
     "apollo-server-express": "^3.6.1",
     "bcrypt": "^5.0.1",
     "express": "^4.17.2",
-    "graphql": "^16.2.0",
+    "graphql": "^15.8.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.4",
     "stripe": "^8.195.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
