@@ -31,13 +31,13 @@ db.once('open', async () => {
       description:
         'This a place holder for a description of thi dinning table to be entered by the seller.',
       image: 'dinning-table.jpg',
-      category: categories[0]._id,
+      category: categories[1]._id,
       price: 50.99,
       quantity: 1
     },
     {
       name: 'Bed',
-      category: categories[1]._id,
+      category: categories[2]._id,
       description:
         'This a place holder for a description of this bed to be entered by the seller.',
       image: 'bed.jpg',
@@ -46,7 +46,7 @@ db.once('open', async () => {
     },
     {
       name: 'Glider',
-      category: categories[1]._id,
+      category: categories[3]._id,
       description:
         'This a place holder for a description of this outdoor glider to be entered by the seller.',
       image: 'glidder.jpg',
@@ -55,7 +55,7 @@ db.once('open', async () => {
     },
     {
       name: 'Makeup desk',
-      category: categories[1]._id,
+      category: categories[4]._id,
       description:
         'This a place holder for a description of this makeup desk to be entered by the seller.',
       image: 'makeup-desk.jpg',
@@ -64,7 +64,7 @@ db.once('open', async () => {
     },
     {
       name: 'Recliner',
-      category: categories[2]._id,
+      category: categories[0]._id,
       description:
         'This a place holder for a description of this recliner to be entered by the seller.',
       image: 'recliner.jpg',
@@ -73,7 +73,7 @@ db.once('open', async () => {
     },
     {
       name: 'Bar Stool',
-      category: categories[2]._id,
+      category: categories[1]._id,
       description:
         'This a place holder for a description of this bar stool to be entered by the seller.',
       image: 'bar-stool.jpg',
@@ -81,8 +81,8 @@ db.once('open', async () => {
       quantity: 1
     },
     {
-      name: 'Knightstand',
-      category: categories[3]._id,
+      name: 'nightstand',
+      category: categories[2]._id,
       description:
         'This a place holder for a description of this nightstand to be entered by the seller.',
       image: 'nightstand.jpg',
@@ -91,7 +91,7 @@ db.once('open', async () => {
     },
     {
       name: 'outdoor table',
-      category: categories[4]._id,
+      category: categories[3]._id,
       description: 'This a place holder for a description of this outdoor table to be entered by the seller.',
       image: 'outdoor-table.jpg',
       price: 35.99,
@@ -108,7 +108,7 @@ db.once('open', async () => {
     },
     {
       name: 'dresser',
-      category: categories[4]._id,
+      category: categories[2]._id,
       description:
         'This a place holder for a description of this dresser to be entered by the seller.',
       image: 'dresser.jpg',
@@ -117,7 +117,7 @@ db.once('open', async () => {
     },
     {
       name: 'ottoman',
-      category: categories[4]._id,
+      category: categories[0]._id,
       description:
         'This a place holder for a description of this ottoman to be entered by the seller.',
       image: 'ottoman.jpg',
