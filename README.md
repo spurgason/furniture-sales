@@ -10,12 +10,7 @@ Do you have furniture that you no longer need? Have you thought about selling th
 ## Acceptance Criteria
 
 ## Usage
-[Deployed Site](https://family-media-uncc.herokuapp.com/)
-
-Navigate to the above website. Join the community. Enjoy!
-
-[SS/video of deployed site]
-
+[Deployed Site](https://furniture-sales.herokuapp.com/)
 
 ## Technologies Used
 `node.js`
