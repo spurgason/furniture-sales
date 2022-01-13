@@ -7,14 +7,51 @@
 ## Description
 Do you have furniture that you no longer need? Have you thought about selling these items but found it's challenging to find a simple yet secure way to draw interested buyer. Or maybe you're someone who is looking to purchase furniture but don't know where to begin your search. Well, we’ve created a simple app that allows sellers to post pictures, a description, and a price for used furniture items while also allowing buyers to search through the listed inventory. Our application gives users the opportunity to create a secure account with login, while also providing buyers with a secure checkout option for payment. We've simplified the process of buying and selling used furniture. With our Used Furniture-Sales app, each user has equal access to post and search used furniture items uploaded by other users. Our solution will exponentially decrease the stress of selling your used furniture items or buying used
 
-## Acceptance Criteria
 
-## Usage
-[Deployed Site](https://family-media-uncc.herokuapp.com/)
+## Project Requirements
 
-Navigate to the above website. Join the community. Enjoy!
+Use React for the front end.
 
-[SS/video of deployed site]
+Use GraphQL with a Node.js and Express.js server.
+
+Use MongoDB and the Mongoose ODM for the database.
+
+Use queries and mutations for retrieving, adding, updating, and deleting data.
+
+Be deployed using Heroku (with data).
+
+Have a polished UI.
+
+Be responsive.
+
+Be interactive (i.e., accept and respond to user input).
+
+Include authentication (JWT).
+
+Protect sensitive API key information on the server.
+
+Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, etc.).
+
+Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+
+Finally, you must add your project to the portfolio that you created in Module 20.
+You should also consider the following suggestions to help your project stand out:
+
+CSS Styling
+Instead of using a CSS library like Bootstrap, consider one of the following suggestions:
+
+Look into the concept of CSS-in-JS, which abstracts CSS to the component level, using JavaScript to describe styles in a declarative and maintainable way. Some popular libraries include styled-components and Emotion.
+
+Try using a component library, such as Semantic UI, Chakra UI, or Ant Design.
+
+Create all the CSS for your application just using CSS.
+
+Ultimately, it doesn't matter which of these options you choose—it just needs to look professional and be mobile-friendly.
+
+Payment Platform
+Consider integrating the Stripe payment platform. Even if you don’t create an e-commerce application, you could set up your site to accept charitable donations.
+
+
 
 
 ## Technologies Used
@@ -40,9 +77,6 @@ Navigate to the above website. Join the community. Enjoy!
 
 `seeds`
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=spurgason&theme=midnight-purple)](https://github.com/anuraghazra/github-readme-stats)
-
-
 
 ## Future Development
 ○ Add funtionality to post furniture items for sale
@@ -53,15 +87,18 @@ Navigate to the above website. Join the community. Enjoy!
 ○	Shareable links for furniture items
 
 
-## Acknowledgements
+## Deployment
+
+●	Deployed    https://furniture-sales.herokuapp.com/
+●	GitHub repo - https://github.com/spurgason/furniture-sales
 
 
-## Contributing [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com)
-[Shane](https://github.com/spurgason)
 
-[Phillip](https://github.com/cltmedicman)
+## Contributing Team
+Shane
 
-[Tenee](https://github.com/trswork)
+Josh
 
-[Josh](https://github.com/mcswajl)
+Tenee
 
+Phillip
