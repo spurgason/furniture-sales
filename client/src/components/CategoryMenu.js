@@ -45,6 +45,7 @@ function CategoryMenu() {
     return (
         <div>
             <h2 className="mt-3 d-flex justify-content-center">Categories</h2>
+            <div className="d-flex justify-content-center">
             {categories.map((item) => (
                 <button
                     className="btn btn-primary m-2"
@@ -56,6 +57,7 @@ function CategoryMenu() {
                     {item.name}
                 </button>
             ))}
+            </div>
         </div>
     );
 }

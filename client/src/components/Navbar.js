@@ -13,7 +13,7 @@ const AppNavbar = () => {
 
   return (
     <>
-      <Navbar bg='dark' variant='dark' expand='lg'>
+      <Navbar bg='light' variant='light' expand='lg'>
         <Container fluid>
           <Navbar.Brand as={Link} to='/'>
             Furniture Sales
@@ -24,15 +24,9 @@ const AppNavbar = () => {
               <Nav.Link as={Link} to='/'>
                 Search For Item
               </Nav.Link>
-              <Nav.Link as={Link} to='/cart'>
-                  🛒
-                  </Nav.Link>
               {/* if user is logged in show saved items and logout */}
               {Auth.loggedIn() ? (
                 <>
-                  <Nav.Link as={Link} to='/saved'>
-                    See Your Item
-                  </Nav.Link>
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
                 </>
               ) : (

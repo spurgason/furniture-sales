@@ -5,6 +5,7 @@ import { useLazyQuery } from '@apollo/client';
 import { QUERY_CHECKOUT } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
 import Auth from '../utils/auth';
+import "../cart.css"
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../utils/actions';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -86,7 +87,7 @@ const Cart = () => {
   return (
     <div className="cart">
       <div className="close" onClick={toggleCart}>
-        [close]
+        X
       </div>
       <h2>Shopping Cart</h2>
       {state.cart.length ? (
@@ -96,10 +97,10 @@ const Cart = () => {
           ))}
 
           <div className="flex-row space-between">
-            <strong>Total: ${calculateTotal()}</strong>
+            <strong>Total: ${calculateTotal()}</strong><br></br>
 
             {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
+              <button className='btn btn-primary btn-sm' onClick={submitCheckout}>Checkout</button>
             ) : (
               <span>(log in to check out)</span>
             )}
@@ -108,9 +109,8 @@ const Cart = () => {
       ) : (
         <h3>
           <span role="img" aria-label="sad">
-          😥
           </span>
-          You haven't added anything to your cart yet!
+          Cart is empty!
         </h3>
       )}
     </div>
