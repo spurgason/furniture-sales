@@ -2,7 +2,7 @@
 
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/Naereen/badges)
 
-```
+
 
 ## Description
 Do you have furniture that you no longer need? Have you thought about selling these items but found it's challenging to find a simple yet secure way to draw interested buyer. Or maybe you're someone who is looking to purchase furniture but don't know where to begin your search. Well, we’ve created a simple app that allows sellers to post pictures, a description, and a price for used furniture items while also allowing buyers to search through the listed inventory. Our application gives users the opportunity to create a secure account with login, while also providing buyers with a secure checkout option for payment. We've simplified the process of buying and selling used furniture. With our Used Furniture-Sales app, each user has equal access to post and search used furniture items uploaded by other users. Our solution will exponentially decrease the stress of selling your used furniture items or buying used
